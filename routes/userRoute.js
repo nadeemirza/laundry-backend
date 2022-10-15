@@ -106,7 +106,6 @@ router.get("/verify", fetchuser, async (req, res) => {
 router.get("/users", async (req, res) => {
   const data = await userDb.find();
   res.json({
-    user: req.user,
     data: data,
     status: "success",
   });
